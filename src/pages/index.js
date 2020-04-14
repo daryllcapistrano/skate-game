@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 import { Container, Grid } from '@material-ui/core';
 // My components
-import Scoreboard from '../components/Scoreboard';
+import Scoreboard from '../components/Scoreboard/Scoreboard';
 
 const IndexPage = () => (
 	<Layout>

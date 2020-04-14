@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Divider, Paper } from '@material-ui/core';
+import { Container, Divider, Paper, Chip } from '@material-ui/core';
 import MakeBailButton from '../Buttons/MakeBailButton';
 
 export default class Scoreboard extends Component {
@@ -7,7 +7,7 @@ export default class Scoreboard extends Component {
 		return (
 			<Paper elevation={2} style={{ textAlign: 'center', margin: 'auto' }}>
 				<Container>
-					<h5>S.K.A.T.E.</h5>
+					<Chip />
 				</Container>
 				<Divider light />
 				<Container>
