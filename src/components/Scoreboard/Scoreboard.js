@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Divider, Paper } from '@material-ui/core';
-import MakeBailButton from './MakeBailButton';
+import MakeBailButton from '../Buttons/MakeBailButton';
 
 export default class Scoreboard extends Component {
 	render() {

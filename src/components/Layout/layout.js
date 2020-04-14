@@ -9,8 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import StickyFooter from "./StickyFooter"
+import Header from "../Header/header"
+import StickyFooter from "../Footer/StickyFooter"
 import "./layout.css"
 
 const Layout = ({ children }) => {
