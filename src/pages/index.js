@@ -1,23 +1,24 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
-
-import Icon from '@material-ui/core/Icon';
+import { Container, Grid } from '@material-ui/core';
+// My components
+import Scoreboard from '../components/Scoreboard';
 
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
-		<h1>Hi people</h1>
-		<p>Welcome to your new Gatsby site.</p>
-		<p>Now go build something great.</p>
-		<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-			<Image />
-		</div>
-		<Link to="/page-2/">Go to page 2</Link>
-		<Icon>star</Icon>
+		<Container>
+			<Grid container spacing={3}>
+				<Grid container item xs={6}>
+					<Scoreboard />
+				</Grid>
+				<Grid container item xs={6}>
+					<Scoreboard />
+				</Grid>
+			</Grid>
+		</Container>
 	</Layout>
 );
 
