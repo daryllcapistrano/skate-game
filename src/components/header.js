@@ -26,6 +26,7 @@ const Header = ({ siteTitle }) => (
 				>
 					{siteTitle}
 				</Link>
+				<p>a skateboarding game scoreboard</p>
 			</h1>
 		</div>
 	</header>
