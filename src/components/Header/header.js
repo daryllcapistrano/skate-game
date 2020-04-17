@@ -1,47 +1,27 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import Container from '@material-ui/core/Container';
+import { Link } from 'gatsby';
 
-import { Container } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 
-const Header = ({ siteTitle }) => (
-	<header
-		style={{
-			background: `#fafafa`,
-			marginBottom: `1.45rem`
-		}}
-	>
-		<Container>
-			<Container
-				style={{
-					margin: `0 auto`,
-					maxWidth: `960`,
-					padding: `1rem`
-				}}
-			>
-				<h2 style={{ margin: 0 }}>
-					<Link
-						to="/"
-						style={{
-							color: `black`,
-							textDecoration: `none`
-						}}
-					>
-						{siteTitle}
-					</Link>
-					<Container>
-						<p style={{ color: `gray` }}> - game tracker</p>
-					</Container>
-				</h2>
-			</Container>
-			<Container>
-				<Link to="/trick-generator">trick generator</Link>
-				<Link to="/add-on">add on</Link>
-				<Link to="/spot-bible">spot bible</Link>
-			</Container>
-		</Container>
-	</header>
-);
+const useStyles = makeStyles((theme) => ({
+	root: {
+		flexGrow: 1
+	},
+	menuButton: {
+		marginRight: theme.spacing(2)
+	},
+	title: {
+		flexGrow: 1
+	}
+}));
 
 Header.propTypes = {
 	siteTitle: PropTypes.string
@@ -51,4 +31,35 @@ Header.defaultProps = {
 	siteTitle: ``
 };
 
-export default Header;
+export default function Header({ siteTitle }) {
+	const classes = useStyles();
+
+	return (
+		<div className={classes.root}>
+			<AppBar position="static" color="transparent">
+				<Toolbar>
+					<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+						<MenuIcon />
+					</IconButton>
+					<Typography variant="h6" className={classes.title}>
+						<h2 style={{ margin: 0 }}>
+							<Link
+								to="/"
+								style={{
+									color: `black`,
+									textDecoration: `none`
+								}}
+							>
+								{siteTitle}
+							</Link>
+						</h2>
+					</Typography>
+					<Container>
+						<p>a skateboard game tracker</p>
+					</Container>
+					<Button color="inherit">Login</Button>
+				</Toolbar>
+			</AppBar>
+		</div>
+	);
+}
