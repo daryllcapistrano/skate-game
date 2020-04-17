@@ -1,15 +1,45 @@
 import React from 'react';
-import { Container, Paper } from '@material-ui/core';
+import { Container, Paper, Grid } from '@material-ui/core';
 
 export default function playerstats() {
 	return (
 		<Container>
 			<Paper elevation={2}>
 				<Container>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima est eaque laboriosam cupiditate! Alias,
-						natus? Ratione eveniet sit id aut consectetur suscipit architecto et voluptatum.
-					</p>
+					<Grid container>
+						<Grid item xs={12} sm={6}>
+							<Grid container>
+								<Grid item xs={12}>
+									Player Name:{' '}
+								</Grid>
+								<Grid item xs={12}>
+									Stance:{' '}
+								</Grid>
+								<Grid item xs={12}>
+									Tricks Landed:{' '}
+								</Grid>
+								<Grid item xs={12}>
+									Tricks Missed:{' '}
+								</Grid>
+							</Grid>
+						</Grid>
+						<Grid item xs={12} sm={6}>
+							<Grid container>
+								<Grid item xs={12}>
+									Player Name:{' '}
+								</Grid>
+								<Grid item xs={12}>
+									Stance:{' '}
+								</Grid>
+								<Grid item xs={12}>
+									Tricks Landed:{' '}
+								</Grid>
+								<Grid item xs={12}>
+									Tricks Missed:{' '}
+								</Grid>
+							</Grid>
+						</Grid>
+					</Grid>
 				</Container>
 			</Paper>
 		</Container>
