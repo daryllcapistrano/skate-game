@@ -11,27 +11,34 @@ const Header = ({ siteTitle }) => (
 			marginBottom: `1.45rem`
 		}}
 	>
-		<Container
-			style={{
-				margin: `0 auto`,
-				maxWidth: `960`,
-				padding: `1rem`
-			}}
-		>
-			<h2 style={{ margin: 0 }}>
-				<Link
-					to="/"
-					style={{
-						color: `black`,
-						textDecoration: `none`
-					}}
-				>
-					{siteTitle}
-				</Link>
-				<Container>
-					<p style={{ color: `gray` }}> - game tracker</p>
-				</Container>
-			</h2>
+		<Container>
+			<Container
+				style={{
+					margin: `0 auto`,
+					maxWidth: `960`,
+					padding: `1rem`
+				}}
+			>
+				<h2 style={{ margin: 0 }}>
+					<Link
+						to="/"
+						style={{
+							color: `black`,
+							textDecoration: `none`
+						}}
+					>
+						{siteTitle}
+					</Link>
+					<Container>
+						<p style={{ color: `gray` }}> - game tracker</p>
+					</Container>
+				</h2>
+			</Container>
+			<Container>
+				<Link to="/trick-generator">trick generator</Link>
+				<Link to="/add-on">add on</Link>
+				<Link to="/spot-bible">spot bible</Link>
+			</Container>
 		</Container>
 	</header>
 );
