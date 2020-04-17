@@ -42,6 +42,9 @@ export default class Scoreboard extends Component {
 								Bail
 							</AwesomeButton>
 						</Grid>
+						<Grid item>
+							<h2>Player Turn</h2>
+						</Grid>
 					</Grid>
 				</Paper>
 			</Container>

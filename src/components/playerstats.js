@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Paper, Grid } from '@material-ui/core';
+import { Container, Paper, Grid, Divider, List, ListItem, ListItemText } from '@material-ui/core';
 
 export default function playerstats() {
 	return (
@@ -8,36 +8,43 @@ export default function playerstats() {
 				<Container>
 					<Grid container>
 						<Grid item xs={12} sm={6}>
-							<Grid container>
-								<Grid item xs={12}>
-									Player Name:{' '}
-								</Grid>
-								<Grid item xs={12}>
-									Stance:{' '}
-								</Grid>
-								<Grid item xs={12}>
-									Tricks Landed:{' '}
-								</Grid>
-								<Grid item xs={12}>
-									Tricks Missed:{' '}
-								</Grid>
-							</Grid>
+							<List>
+								<ListItem>
+									<ListItemText primary="Player Name: " />
+								</ListItem>
+								<Divider />
+								<ListItem>
+									<ListItemText primary="Stance: " />
+								</ListItem>
+								<Divider />
+								<ListItem>
+									<ListItemText primary="Tricks Made: " />
+								</ListItem>
+								<Divider />
+								<ListItem>
+									<ListItemText primary="Tricks Bailed:" />
+								</ListItem>
+							</List>
 						</Grid>
+						<Divider />
 						<Grid item xs={12} sm={6}>
-							<Grid container>
-								<Grid item xs={12}>
-									Player Name:{' '}
-								</Grid>
-								<Grid item xs={12}>
-									Stance:{' '}
-								</Grid>
-								<Grid item xs={12}>
-									Tricks Landed:{' '}
-								</Grid>
-								<Grid item xs={12}>
-									Tricks Missed:{' '}
-								</Grid>
-							</Grid>
+							<List>
+								<ListItem>
+									<ListItemText primary="Player Name: " />
+								</ListItem>
+								<Divider />
+								<ListItem>
+									<ListItemText primary="Stance: " />
+								</ListItem>
+								<Divider />
+								<ListItem>
+									<ListItemText primary="Tricks Made: " />
+								</ListItem>
+								<Divider />
+								<ListItem>
+									<ListItemText primary="Tricks Bailed:" />
+								</ListItem>
+							</List>
 						</Grid>
 					</Grid>
 				</Container>

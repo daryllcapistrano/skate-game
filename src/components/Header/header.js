@@ -7,7 +7,7 @@ import { Container } from '@material-ui/core';
 const Header = ({ siteTitle }) => (
 	<header
 		style={{
-			background: `black`,
+			background: `#fafafa`,
 			marginBottom: `1.45rem`
 		}}
 	>
@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
 				<Link
 					to="/"
 					style={{
-						color: `white`,
+						color: `black`,
 						textDecoration: `none`
 					}}
 				>
