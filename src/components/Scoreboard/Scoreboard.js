@@ -5,14 +5,27 @@ import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 
 export default class Scoreboard extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { score: 0 };
+	}
+
 	render() {
 		return (
 			<Container style={{ margin: `auto`, paddingBottom: '1rem' }}>
 				<Paper elevation={2} style={{ margin: 'auto', justifyContent: `space-between` }}>
-					<Grid container spacing={3} style={{ padding: '1rem' }}>
+					<Grid container spacing={1} style={{ padding: '1rem' }}>
 						<Grid item xs={12}>
-							<Container>Player 1 score: SKATE</Container>
-							<Container>Player 2 score: SKATE</Container>
+							<Grid container>
+								<Grid item sm={6}>
+									<h1>Player 1: </h1>
+									<p>{this.state.score}</p>
+								</Grid>
+								<Grid item sm={6}>
+									<h1>Player 2: </h1>
+									<p>{this.state.score}</p>
+								</Grid>
+							</Grid>
 						</Grid>
 						<Grid
 							item
@@ -41,9 +54,6 @@ export default class Scoreboard extends Component {
 							<AwesomeButton type="secondary" size="large">
 								Bail
 							</AwesomeButton>
-						</Grid>
-						<Grid item>
-							<h2>Player Turn</h2>
 						</Grid>
 					</Grid>
 				</Paper>
