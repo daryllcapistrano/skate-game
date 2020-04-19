@@ -4,6 +4,8 @@ import { Container, Paper, Grid } from '@material-ui/core';
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 
+import ToggleButtons from '../ToggleButtons';
+
 export default class Scoreboard extends Component {
 	constructor(props) {
 		super(props);
@@ -26,6 +28,7 @@ export default class Scoreboard extends Component {
 						<Grid item xs={12} style={{ margin: `auto`, textAlign: `center` }}>
 							<h1>Player 1: </h1>
 							<p>{this.state.score}</p>
+							<ToggleButtons />
 						</Grid>
 						<Grid
 							item
