@@ -20,25 +20,16 @@ export default class Scoreboard extends Component {
 
 	render() {
 		return (
-			<Container style={{ margin: `auto`, paddingBottom: '1rem' }}>
-				<Paper elevation={2} style={{ margin: 'auto', justifyContent: `space-between` }}>
-					<Grid container spacing={1} style={{ padding: '1rem' }}>
-						<Grid item xs={12}>
-							<Grid container>
-								<Grid item sm={6}>
-									<h1>Player 1: </h1>
-									<p>{this.state.score}</p>
-								</Grid>
-								<Grid item sm={6}>
-									<h1>Player 2: </h1>
-									<p>{this.state.score}</p>
-								</Grid>
-							</Grid>
+			<Container style={{ margin: `auto`, paddingBottom: `1rem` }}>
+				<Paper elevation={2} style={{ margin: `auto`, justifyContent: `center` }}>
+					<Grid container spacing={1} style={{ padding: `1rem` }}>
+						<Grid item xs={12} style={{ margin: `auto`, textAlign: `center` }}>
+							<h1>Player 1: </h1>
+							<p>{this.state.score}</p>
 						</Grid>
 						<Grid
 							item
 							xs={12}
-							sm={6}
 							style={{
 								display: `flex`,
 								alignItems: `center`,
@@ -52,7 +43,6 @@ export default class Scoreboard extends Component {
 						<Grid
 							item
 							xs={12}
-							sm={6}
 							style={{
 								display: `flex`,
 								alignItems: `center`,

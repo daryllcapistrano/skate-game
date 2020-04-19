@@ -4,13 +4,13 @@ import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 // My components
 import Scoreboard from '../components/Scoreboard/Scoreboard';
-import PlayerStats from '../components/playerstats';
+// import PlayerStats from '../components/playerstats';
 
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
 		<Scoreboard />
-		<PlayerStats />
+		{/* <PlayerStats /> */}
 	</Layout>
 );
 
