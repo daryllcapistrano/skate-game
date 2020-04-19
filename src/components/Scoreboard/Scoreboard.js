@@ -10,6 +10,14 @@ export default class Scoreboard extends Component {
 		this.state = { score: 0 };
 	}
 
+	IncrementScore = () => {
+		this.setState({ score: this.state.score + 1 });
+	};
+
+	DecrementScore = () => {
+		this.setState({ score: this.state.score - 1 });
+	};
+
 	render() {
 		return (
 			<Container style={{ margin: `auto`, paddingBottom: '1rem' }}>
@@ -37,7 +45,7 @@ export default class Scoreboard extends Component {
 								justifyContent: `center`
 							}}
 						>
-							<AwesomeButton type="primary" size="large">
+							<AwesomeButton type="primary" size="large" onPress={this.IncrementScore}>
 								Make
 							</AwesomeButton>
 						</Grid>
@@ -51,7 +59,7 @@ export default class Scoreboard extends Component {
 								justifyContent: `center`
 							}}
 						>
-							<AwesomeButton type="secondary" size="large">
+							<AwesomeButton type="secondary" size="large" onPress={this.DecrementScore}>
 								Bail
 							</AwesomeButton>
 						</Grid>
