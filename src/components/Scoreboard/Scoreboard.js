@@ -26,8 +26,7 @@ export default class Scoreboard extends Component {
 				<Paper elevation={2} style={{ margin: `auto`, justifyContent: `center` }}>
 					<Grid container spacing={1} style={{ padding: `1rem` }}>
 						<Grid item xs={12} style={{ margin: `auto`, textAlign: `center` }}>
-							<h1>Player 1: </h1>
-							<p>{this.state.score}</p>
+							<h1>Skater Name: {this.state.score}</h1>
 							<ToggleButtons />
 						</Grid>
 						<Grid
