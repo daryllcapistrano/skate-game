@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Paper, Grid } from '@material-ui/core';
+import { Container, Paper, Grid, Divider } from '@material-ui/core';
 
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
@@ -22,12 +22,13 @@ export default class Scoreboard extends Component {
 
 	render() {
 		return (
-			<Container style={{ margin: `auto`, paddingBottom: `1rem` }}>
+			<Container style={{ margin: `auto` }}>
 				<Paper elevation={2} style={{ margin: `auto`, justifyContent: `center` }}>
 					<Grid container spacing={1} style={{ padding: `1rem` }}>
 						<Grid item xs={12} style={{ margin: `auto`, textAlign: `center` }}>
-							<h1>Skater Name: {this.state.score}</h1>
 							<ToggleButtons />
+							<Divider />
+							<h1>player 1 score: {this.state.score}</h1>
 						</Grid>
 						<Grid
 							item
